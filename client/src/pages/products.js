@@ -16,7 +16,7 @@ export default function ProductManager() {
   // 🔄 Fetch all products
   const fetchProducts = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/items');
+      const res = await fetch('https://ecommercewebapp-zs77.onrender.com/api/items');
       const data = await res.json();
       setProducts(data);
     } catch (err) {
@@ -45,8 +45,8 @@ export default function ProductManager() {
 
     try {
       const url = editingId
-        ? `http://localhost:5000/api/items/${editingId}`
-        : 'http://localhost:5000/api/items';
+        ? `https://ecommercewebapp-zs77.onrender.com/api/items/${editingId}`
+        : 'https://ecommercewebapp-zs77.onrender.com/api/items';
 
       const method = editingId ? 'PUT' : 'POST';
 
@@ -90,7 +90,7 @@ export default function ProductManager() {
   // ❌ Delete product
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/items/${id}`, {
+      const res = await fetch(`https://ecommercewebapp-zs77.onrender.com/api/items/${id}`, {
         method: 'DELETE'
       });
 

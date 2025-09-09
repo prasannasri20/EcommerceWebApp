@@ -26,7 +26,7 @@ export default function Products() {
 
   const fetchProducts = useCallback(async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/items', {
+      const res = await axios.get('https://ecommercewebapp-zs77.onrender.com/api/items', {
         params: buildFilterParams(category, price, search),
       });
       setProducts(res.data);
