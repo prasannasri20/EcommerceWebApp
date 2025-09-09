@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: backend-service
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    disk:
+      name: sqlite-data
+      mountPath: /data
